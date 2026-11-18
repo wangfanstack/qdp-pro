@@ -1,0 +1,2 @@
+com.agsccc.agriledger.framework.datapermission.config.AgriledgerDataPermissionAutoConfiguration
+com.agsccc.agriledger.framework.datapermission.config.AgriledgerDeptDataPermissionAutoConfiguration

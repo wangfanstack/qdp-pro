@@ -1,0 +1,2 @@
+com.agsccc.agriledger.framework.tracer.config.AgriledgerTracerAutoConfiguration
+com.agsccc.agriledger.framework.tracer.config.AgriledgerMetricsAutoConfiguration

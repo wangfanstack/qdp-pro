@@ -1,0 +1,2 @@
+com.agsccc.agriledger.framework.quartz.config.AgriledgerQuartzAutoConfiguration
+com.agsccc.agriledger.framework.quartz.config.AgriledgerAsyncAutoConfiguration

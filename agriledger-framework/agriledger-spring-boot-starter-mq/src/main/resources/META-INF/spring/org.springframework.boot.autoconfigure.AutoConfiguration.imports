@@ -1,0 +1,3 @@
+com.agsccc.agriledger.framework.mq.redis.config.AgriledgerRedisMQProducerAutoConfiguration
+com.agsccc.agriledger.framework.mq.redis.config.AgriledgerRedisMQConsumerAutoConfiguration
+com.agsccc.agriledger.framework.mq.rabbitmq.config.AgriledgerRabbitMQAutoConfiguration

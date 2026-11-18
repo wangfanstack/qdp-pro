@@ -1,0 +1,3 @@
+com.agsccc.agriledger.framework.security.config.AgriledgerSecurityAutoConfiguration
+com.agsccc.agriledger.framework.security.config.AgriledgerWebSecurityConfigurerAdapter
+com.agsccc.agriledger.framework.operatelog.config.AgriledgerOperateLogConfiguration

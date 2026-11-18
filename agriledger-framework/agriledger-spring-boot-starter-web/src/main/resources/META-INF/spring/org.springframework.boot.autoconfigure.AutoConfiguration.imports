@@ -1,0 +1,7 @@
+com.agsccc.agriledger.framework.apilog.config.AgriledgerApiLogAutoConfiguration
+com.agsccc.agriledger.framework.jackson.config.AgriledgerJacksonAutoConfiguration
+com.agsccc.agriledger.framework.swagger.config.AgriledgerSwaggerAutoConfiguration
+com.agsccc.agriledger.framework.web.config.AgriledgerWebAutoConfiguration
+com.agsccc.agriledger.framework.xss.config.AgriledgerXssAutoConfiguration
+com.agsccc.agriledger.framework.banner.config.AgriledgerBannerAutoConfiguration
+com.agsccc.agriledger.framework.encrypt.config.AgriledgerApiEncryptAutoConfiguration

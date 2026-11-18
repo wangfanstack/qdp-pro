@@ -1,0 +1,3 @@
+com.agsccc.agriledger.framework.datasource.config.AgriledgerDataSourceAutoConfiguration
+com.agsccc.agriledger.framework.mybatis.config.AgriledgerMybatisAutoConfiguration
+com.agsccc.agriledger.framework.translate.config.AgriledgerTranslateAutoConfiguration
