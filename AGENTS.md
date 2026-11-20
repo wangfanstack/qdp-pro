@@ -17,7 +17,7 @@
 ## 模块结构与依赖方向
 
 ```
-agriledger-server          启动模块（入口 AgriledgerServerApplication，端口 dev=18080 / test|prod=48080）
+agriledger-server          启动模块（入口 AgriLedgerServerApplication，端口三 profile 均为 8800）
 └─ agriledger-module-system    系统管理（用户/角色/部门/租户/菜单）
    └─ agriledger-module-infra      基础设施（文件/通知/短信/代码生成/websocket）
       └─ agriledger-framework          14 个 starter（common、mybatis、redis、web、security、
@@ -110,7 +110,7 @@ mvn test -pl agriledger-module-system -am          # 运行单模块测试
 ```
 
 - 配置文件：`agriledger-server/src/main/resources/application{,-dev,-test,-prod}.yaml`；prod 用 `${DB_URL}` 等环境变量。
-- 初始化数据库：`sql/mysql/ruoyi-vue-pro.sql` + `sql/mysql/quartz.sql`（dev 库名 `agri`）。
+- 仓库当前无 `sql/` 数据库初始化脚本（docker-compose 引用的 `sql/mysql/*.sql` 缺失），表结构需自行准备（可参考 `docs/phase1/03_最终DDL建议.md`）；dev 数据源为本地 `127.0.0.1:3306/agriledger`。
 - Docker：`agriledger-server/Dockerfile`（运行时 JDK 21、编译目标 17）、`script/docker/`、部署脚本 `script/shell/deploy.sh`。
 
 ## 测试与验证
@@ -132,7 +132,7 @@ mvn test -pl agriledger-module-system -am          # 运行单模块测试
 
 ## 已知注意事项
 
-- 本目录当前 **不是 git 仓库**（无 `.git`）；CI 配置在 `.github/workflows/maven.yml` 仅供参考。
+- 本目录已初始化为 git 仓库（分支 master）；CI 配置在 `.github/workflows/maven.yml` 仅供参考。
 - 涉及统一身份、商户入驻、员工与角色互通的需求，明确要求先勘察现状、优先复用、不重写认证、租户隔离不可绕过。
-- 若后续初始化为 git 仓库：未经用户明确授权，不执行 commit、push、reset --hard、clean 等操作。
-- 仓库无 README；排查实现时以 `agriledger-module-system` 的 dept/user 域为标准参考样例。
+- 未经用户明确授权，不执行 commit、push、reset --hard、clean 等 git 操作。
+- 项目主文档为根目录 `README.md`；排查实现时以 `agriledger-module-system` 的 dept/user 域为标准参考样例。

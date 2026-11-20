@@ -1,14 +1,15 @@
 ######################################################################
 # Build Tools
 
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
+
+### Gradle ###
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
-
-target/
-!.mvn/wrapper/maven-wrapper.jar
-
-.flattened-pom.xml
 
 ######################################################################
 # IDE
@@ -35,30 +36,50 @@ dist/
 nbdist/
 .nb-gradle/
 
+### VS Code ###
+.vscode/
+
 ######################################################################
 # Others
+
 *.log
 *.xml.versionsBackup
 *.swp
 
-!*/build/*.java
-!*/build/*.html
-!*/build/*.xml
-
-### JRebel ###
+hs_err_pid*
+.attach_pid*
 rebel.xml
 
 application-my.yaml
+application-local.yaml
 
-/agriledger-ui-app/unpackage/
+######################################################################
+# OS
+
 .DS_Store
-**/.DS_Store
+Thumbs.db
 
-### 本地环境变量 ###
-.env
+######################################################################
+# Frontend
 
-### 安全扫描工具的本地状态 ###
-.mimosa/
-logs/
+/hft-ui-app/unpackage/
+
+######################################################################
+# AI / Agent
+
+.claude/**
+.agents/**
+.mimosa/**
+/**/.mimosa/**
+.zcode/**
+.mcp.json
+.codex
+.zcodeignore
+AGENTS.md
+
+######################################################################
+# Project specific
+
+script/**
+# 生产环境敏感配置（服务器部署目录维护，模板见 .env.example）
 docs/**
-sql/**
